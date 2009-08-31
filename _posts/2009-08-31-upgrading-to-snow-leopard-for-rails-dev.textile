@@ -12,7 +12,7 @@ uninstall the mysql gem:
 sudo gem uninstall mysql
 
 update your gems
-<code>sudo gem update --system; sudo gem pristine --all</code>
+<pre class="terminal"><code>sudo gem update --system; sudo gem pristine --all</code></pre>
 
 go to /usr/local and remove references to mysql
 
@@ -24,9 +24,9 @@ you may need to reboot for whatever reason, I did.
 rebuild sphinx
 download 0.9.8.1 stable release: http://www.sphinxsearch.com/downloads.html
 uncompress the tar file and cd into the directory.
-<code>env ARCHFLAGS="-arch x86_64" ./configure
+<pre class="terminal"><code>env ARCHFLAGS="-arch x86_64" ./configure
 make
 sudo make install
-</code>
+</code></pre>
 
 Thanks to http://www.tommycampbell.net/ and http://hivelogic.com to guide me along.
