@@ -1,0 +1,32 @@
+---
+layout: post
+title: Upgrading to Snow Leopard for a Rails Dev
+---
+
+h1. {{ page.title }}
+
+p(meta). 27 Aug 2009 - Atlanta
+
+Lesson 1, don't panic, lesson 2 remember lesson 1 in times of panic.
+uninstall the mysql gem:
+sudo gem uninstall mysql
+
+update your gems
+<code>sudo gem update --system; sudo gem pristine --all</code>
+
+go to /usr/local and remove references to mysql
+
+follow Hivelogic's tutorial on building mysql on Snow Leopard:
+http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/
+
+you may need to reboot for whatever reason, I did.
+
+rebuild sphinx
+download 0.9.8.1 stable release: http://www.sphinxsearch.com/downloads.html
+uncompress the tar file and cd into the directory.
+<code>env ARCHFLAGS="-arch x86_64" ./configure
+make
+sudo make install
+</code>
+
+Thanks to http://www.tommycampbell.net/ and http://hivelogic.com to guide me along.
